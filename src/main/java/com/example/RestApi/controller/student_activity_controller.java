@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/student")
-public class student_activity {
+public class student_activity_controller {
     Map<Integer, studentClass> student_map=new HashMap<Integer, studentClass>();
 
     @GetMapping("/displayStudentData")
