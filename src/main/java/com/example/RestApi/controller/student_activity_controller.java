@@ -1,6 +1,6 @@
 package com.example.RestApi.controller;
 
-import com.example.RestApi.helper.studentClass;
+import com.example.RestApi.entity.studentClass;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/student")
+@RequestMapping("/_student")
 public class student_activity_controller {
     Map<Integer, studentClass> student_map=new HashMap<Integer, studentClass>();
 
@@ -20,7 +20,7 @@ public class student_activity_controller {
 
     @PostMapping("/insertStudent")
     public String insertStudent(@RequestBody studentClass student){
-        student_map.put(student.getId(),student);
+        //student_map.put(student.getId(),student);
         return "New student is inserted";
     }
 
